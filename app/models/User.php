@@ -22,7 +22,7 @@ class User {
         /*
          * if username and password good then
          * $this->auth = true;
-        */
+         */
         $username = strtolower($username);
 
         $db = db_connect();
@@ -53,7 +53,7 @@ class User {
         $db = db_connect();
         $stmt = $db->prepare("SELECT * FROM users WHERE username = ?");
         $stmt->execute([$username]);
-        if ($stmt->fetch()) return false;
+        if ($stmt->fetch()) return false; // Username already exists
 
         $hash = password_hash($password, PASSWORD_DEFAULT);
         $stmt = $db->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
