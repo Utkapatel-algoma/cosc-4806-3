@@ -27,3 +27,4 @@
 	</div>
 </div>
     <?php require_once 'app/views/templates/footer.php' ?>
+	php <p><a href="/create">Create a new account</a></p>
