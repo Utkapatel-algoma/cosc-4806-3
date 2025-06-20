@@ -1,0 +1,24 @@
+/* Apply Times New Roman and bold to all text, or specific elements */
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+/* Example of cursive for specific elements, like headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Brush Script MT", cursive; /* Or another cursive font you like */
+    font-weight: normal; /* Cursive fonts often look better without bold */
+}
+
+/* You can also target specific Bootstrap classes to override them */
+.btn-primary {
+    background-color: #0056b3; /* Darker blue */
+    border-color: #0056b3;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+/* Example to make specific text bold if needed, though 'body' makes most things bold */
+p {
+    /* font-weight: bold; /* uncomment if paragraphs should also be bold if not inherited */
+}
