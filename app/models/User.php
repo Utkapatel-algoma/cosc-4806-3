@@ -22,14 +22,16 @@ class User {
         /*
          * if username and password good then
          * $this->auth = true;
-         */
-		$username = strtolower($username);
-		$db = db_connect();
+       */
+    		$username = strtolower($username);
+    
+    		$db = db_connect();
         $statement = $db->prepare("select * from users WHERE username = :name;");
         $statement->bindValue(':name', $username);
+
         $statement->execute();
         $rows = $statement->fetch(PDO::FETCH_ASSOC);
-		
+
 		if (password_verify($password, $rows['password'])) {
 			$_SESSION['auth'] = 1;
 			$_SESSION['username'] = ucwords($username);
